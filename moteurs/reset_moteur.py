@@ -24,7 +24,6 @@ def motRST_IRQ(Pin):
     isreset=True
     
     
-    
 def motENC_IRQ(Pin):
     global counter
     if encodeurB.value() == 1:
@@ -33,7 +32,6 @@ def motENC_IRQ(Pin):
         counter -=1
     #print (counter)
         
- 
 def moteur_run(speed, sens):
     #sens = 1 forward et 0 reverse.
     #speed = 0 arret 65535 Duty Cycle de 1.
@@ -89,6 +87,8 @@ while True:
 
 
 
+####################### end main #########################
+
 ###### move to 800
 moteur_run(3000,1)
 while counter< 810:
@@ -112,8 +112,6 @@ while counter> 400:
 moteur_run(0,0)
 print(counter)
 utime.sleep(2)
-
-
 
 while True :
     #print(motRST.value())
